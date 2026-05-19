@@ -3,10 +3,30 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
   Search, Code2, Server, Database, 
-  Figma, Users, BrainCircuit, Play,
+  Users, BrainCircuit, Play,
   Clock, BarChart
 } from 'lucide-react';
 import '../styles/topics.css';
+
+const FigmaIcon = ({ size = 24, color = 'currentColor', ...props }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    stroke={color}
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+    <path d="M12 9h3.5a3.5 3.5 0 1 1-3.5 3.5V9z"></path>
+    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path>
+    <path d="M5 18.5A3.5 3.5 0 0 1 8.5 15H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+  </svg>
+);
 
 const topicsData = [
   {
@@ -60,7 +80,7 @@ const topicsData = [
   {
     id: 'ui-ux',
     title: 'UI/UX',
-    icon: <Figma size={32} color="#F24E1E" />,
+    icon: <FigmaIcon size={32} color="#F24E1E" />,
     difficulty: 'Intermediate',
     duration: '30 mins',
     description: 'Design principles, wireframing, and user research.'

@@ -5,6 +5,7 @@ import {
   Bot, BrainCircuit, Target, Zap, CheckCircle, 
   ArrowRight, Shield, BarChart3, Users, Star
 } from 'lucide-react';
+import Footer from '../components/Footer';
 import '../styles/home.css';
 
 const Home = () => {
@@ -206,52 +207,9 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="footer">
-          <div className="footer-content">
-            <div className="footer-col">
-              <div className="logo" style={{ marginBottom: '16px' }}>
-                <Bot size={24} color="#a855f7" />
-                <span>InterviewAI</span>
-              </div>
-              <p>Empowering developers to ace their interviews with next-generation AI technology.</p>
-            </div>
-            <div className="footer-col">
-              <h3>Product</h3>
-              <ul className="footer-links">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Changelog</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h3>Resources</h3>
-              <ul className="footer-links">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Interview Guides</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Help Center</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h3>Legal</h3>
-              <ul className="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Cookie Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} InterviewAI. All rights reserved.</p>
-            <div style={{ display: 'flex', gap: '16px' }}>
-              <Shield size={20} />
-              <Users size={20} />
-            </div>
-          </div>
-        </footer>
       </div>
+
+      <Footer />
     </div>
   );
 };
