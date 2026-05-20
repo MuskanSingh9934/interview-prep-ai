@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+
+  "dependencies": {
+    "express": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "mongoose": "latest",
+    "openai": "latest"
+  },
+
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
