@@ -10,7 +10,9 @@ export const startInterview = async (req, res) => {
 
     console.log("Generating question...");
 
-    const question = await aiService.generateQuestion(topic, difficulty);
+    const result = await aiService.generateQuestion(topic, difficulty);
+
+    const question = result.question;
 
     const interview = await Interview.create({
       topic,
