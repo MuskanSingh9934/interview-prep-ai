@@ -1,8 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import authRoutes from './routes/authRoutes.js';
-import interviewRoutes from './routes/interviewRoutes.js';
-import resultRoutes from './routes/resultRoutes.js';
+import express from "express";
+import cors from "cors";
+import authRoutes from "./routes/authRoutes.js";
+import interviewRoutes from "./routes/interviewRoutes.js";
+import resultRoutes from "./routes/resultRoutes.js";
 
 const app = express();
 
@@ -13,15 +13,15 @@ app.use(cors());
 app.use(express.json());
 
 // Root endpoint
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.json({
-    message: "Backend Running 🚀"
+    message: "Backend Running 🚀",
   });
 });
 
 // Use routes
-app.use('/api/auth', authRoutes);
-app.use('/api/interview', interviewRoutes);
-app.use('/api/results', resultRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/interview", interviewRoutes);
+app.use("/api/results", resultRoutes);
 
 export default app;
